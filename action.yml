@@ -1,0 +1,15 @@
+name: 'Maven Selenium Tests'
+description: 'Run maven project with chrome driver, in maven sub-directory indicated by args'
+inputs:
+  maven-project-path:
+    description: 'Relative path to maven project sub-directory'
+    required: false
+    default: '.'
+outputs:
+  time: # id of output
+    description: 'Time of tests finished'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.maven-project-path }}
