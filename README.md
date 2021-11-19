@@ -15,6 +15,6 @@ This actions allows you to run Maven/Cucumber project in a github action
 Time of tests finished
 ## Ejemplo de uso
 
-uses: actions/hello-world-docker-action@v1
+uses: actions/maven-tests-action@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  maven-project-path: './e2eTests'
